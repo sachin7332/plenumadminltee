@@ -1,0 +1,82 @@
+<div className="limiter">
+<div className="container-table100">
+  <div className="wrap-table100">
+    <div className="table100 ver1">
+      <div className="table100-firstcol">
+        <table>
+          <thead>
+            <tr className="row100 head">
+              <th className="cell100 column1">Owner</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr className="row100 body">
+              <td className="cell100 column2">userData</td>
+        
+              {
+userData.map( function (val , index)  {
+return(<td className="cell100 column1">{userData[index].name}</td>) ; 
+
+})
+
+
+              }
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+      <div className="wrap-table100-nextcols js-pscroll">
+        <div className="table100-nextcols">
+          <table>
+            <thead>
+              <tr className="row100 head">
+                <th className="cell100 column2">Contact</th>
+                <th className="cell100 column5">Email</th>
+                <th className="cell100 column7">Address</th>
+                <th className="cell100 column8">Roll</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="row100 body">
+                {/* <td className="cell100 column2">8003778151</td> */}
+                   {
+userData.map( function (val , index)  {
+return( <td className="cell100 column2">{userData[index].phone}</td>
+
+) ; 
+
+})
+
+
+                  }
+                <td className="cell100 column5">brandon94@example.com</td>
+                <td className="cell100 column7">New York City, NY</td>
+                <td className="cell100 column8">Comapny</td>
+              </tr>
+              
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+{/*===============================================================================================*/}	
+{/*===============================================================================================*/}
+{/*===============================================================================================*/}
+{/*===============================================================================================*/}
+{/*===============================================================================================*/}
+
+<ul>
+  {
+userData.map( function (val , index)  {
+return(<li>{userData[index].name}</li>) ; 
+
+})
+
+
+                  }
+
+</ul>

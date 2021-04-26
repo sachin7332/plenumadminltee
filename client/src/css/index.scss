@@ -1,0 +1,231 @@
+//
+// Pages: Login & Register
+//
+:root{
+  height: 100%;
+  width: 100%;
+}
+
+$gray-700: #616161;
+$gray-200: #D7C8C8;
+$gray-600: #757575;
+
+.login-logo,
+.register-logo {
+  font-size: 2.1rem;
+  font-weight: 300;
+  margin-bottom: .9rem;
+  text-align: center;
+
+  a {
+    color: $gray-700;
+  }
+}
+
+.login-page,
+.register-page {
+  align-items: center;
+  background-color: $gray-200;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+}
+
+.login-box,
+.register-box {
+  width: 360px;
+
+  // @media (max-width: map-get($grid-breakpoints, sm)) {
+  //   margin-top: .5rem;
+  //   width: 90%;
+  // }
+
+  .card {
+    margin-bottom: 0;
+  }
+}
+
+.login-card-body,
+.register-card-body {
+  background-color: white;
+  border-top: 0;
+  color: #666;
+  padding: 20px;
+
+  .input-group {
+    .form-control {
+      border-right: 0;
+
+      &:focus {
+        box-shadow: none;
+
+        ~ .input-group-prepend .input-group-text,
+        ~ .input-group-append .input-group-text {
+          border-color: lightblue;
+        }
+      }
+
+      &.is-valid {
+        &:focus {
+          box-shadow: none;
+        }
+
+        ~ .input-group-prepend .input-group-text,
+        ~ .input-group-append .input-group-text {
+          border-color: rgb(42, 194, 42);
+        }
+      }
+
+      &.is-invalid {
+        &:focus {
+          box-shadow: none;
+        }
+
+        ~ .input-group-append .input-group-text {
+          border-color: rgb(248, 107, 107);
+        }
+      }
+    }
+   
+
+    .input-group-text {
+      background-color: transparent;
+      border-bottom-right-radius: 1rem;
+      border-left: 0;
+      border-top-right-radius: 1rem;
+      color: #777;
+      transition: all 2s;
+    }
+  }
+}
+
+.login-box-msg,
+.register-box-msg {
+  margin: 0;
+  padding: 0 20px 20px;
+  text-align: center;
+}
+
+.social-auth-links {
+  margin: 10px 0;
+}
+
+.dark-mode {
+  .login-card-body,
+  .register-card-body {
+    background-color: rgb(94, 94, 94);
+    border-color: $gray-600;
+    color: white;
+  }
+  .login-logo,
+  .register-logo {
+    a {
+      color: white;
+    }
+  }
+}
+
+
+.loghead
+{
+
+  background-color: #e9ecef;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700');
+
+$base-spacing-unit: 24px;
+$half-spacing-unit: $base-spacing-unit / 2;
+
+$color-alpha: #1772FF;
+$color-form-highlight: #EEEEEE;
+
+*, *:before, *:after {
+	box-sizing:border-box;
+}
+
+body {
+	padding:$base-spacing-unit;
+	font-family:'Source Sans Pro', sans-serif;
+	margin:0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	margin:0;
+}
+
+.container {
+	max-width: 1000px;
+	margin-right:auto;
+	margin-left:auto;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	min-height:100vh;
+}
+
+.table {
+	width:100%;
+	border:1px solid $color-form-highlight;
+}
+
+.table-header {
+	display:flex;
+	width:100%;
+	background:#000;
+	padding:($half-spacing-unit * 1.5) 0;
+}
+
+.table-row {
+	display:flex;
+	width:100%;
+	padding:($half-spacing-unit * 1.5) 0;
+	
+	&:nth-of-type(odd) {
+		background:$color-form-highlight;
+	}
+}
+
+.table-data, .header__item {
+	flex: 1 1 20%;
+	text-align:center;
+}
+
+.header__item {
+	text-transform:uppercase;
+}
+
+.filter__link {
+	color:white;
+	text-decoration: none;
+	position:relative;
+	display:inline-block;
+	padding-left:$base-spacing-unit;
+	padding-right:$base-spacing-unit;
+	
+	&::after {
+		content:'';
+		position:absolute;
+		right:-($half-spacing-unit * 1.5);
+		color:white;
+		font-size:$half-spacing-unit;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	
+	&.desc::after {
+		content: '(desc)';
+	}
+
+	&.asc::after {
+		content: '(asc)';
+	}
+	
+}
